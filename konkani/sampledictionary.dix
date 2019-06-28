@@ -1,0 +1,23 @@
+<dictionary>
+  <alphabet>abcdefghijklmnopqrstuvwxyz</alphabet>
+  <sdefs>
+    <sdef n="noun"/>
+    <sdef n="singular"/>
+    <sdef n="plural"/>
+  </sdefs>
+
+  <section id="main" type="standard">
+    <e>
+      <p>
+        <l>beer</l>
+        <r>beer<s n="noun"/><s n="singular"/></r>
+      </p>
+    </e>
+    <e>
+      <p>
+        <l>beers</l>
+        <r>beer<s n="noun"/><s n="plural"/></r>
+      </p>
+    </e>
+  </section>
+</dictionary>
