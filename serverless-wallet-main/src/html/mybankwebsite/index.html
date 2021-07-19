@@ -1,0 +1,107 @@
+<!DOCTYPE HTML>
+<head>
+	<title>Wallet Service</title>
+	
+	<script src="angular.1.7.8.js"></script>
+	<script src="_mybankAPIgateway.js"></script>
+	
+</head>
+
+
+<h1>Capgemini Hackathon Round 2 - Wallet Service </h1>
+<body ng-app="_mybankAPIgateway" ng-controller="_mybankAPIgatewayController" style='background-image:url("background-wallet.jpg");'>
+<form id="frm" name="frm">
+			
+			<div align=left>
+				
+				<hr>
+				Account ID:&nbsp;<input id="accountid" type="text" name="accountid" ng-model="accountId" />
+				&nbsp;&nbsp;
+				
+				<button name="btncreateaccount" ng-click="account.createaccount();">Create-Account</button>
+				
+				<button name="btngettranhistory" ng-click="account.gettransactionhistory();">Get-Transaction-History</button>
+							
+				<button name="btngetfunds" ng-click="account.getfunds();">Get-Fund Balance</button>
+				
+				<hr>
+				Fund&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;<input id="fundid" type="text" name="fundid" ng-model="amount" />&nbsp;&nbsp;&nbsp;
+				<button name="btnaddfunds" ng-click="account.addfunds();">Add-Funds</button>
+				
+				<button name="btnwithdrawfunds" ng-click="account.withdrawfunds();">Withdraw-Funds</button>
+				
+				<br><font style="font-size:1vw">* provide Account ID for any fund operation</font>
+				
+				<hr>
+				<br>
+				
+				
+				
+			</div>
+	
+	<br>
+	<hr>
+	<!-- 
+	Transaction row looks as follows
+	{
+	 "expire_timestamp": 1629101447,
+      "txTime": "2021-07-17T08:10:47.499Z",
+      "balance": 23,
+      "accountId": "1323",
+      "txId": "IHnLi3vlwRwBKI8mB49BWB",
+      "timestamp": 1626509447
+	  }
+	  -->
+	<div align=center id="transactionhistory" ng-show="{{showtransactionhistory}}" >
+		<br><b>ACCOUNT TRANSACTION HISTORY</b>
+		<br>
+
+		<table align="center">
+		
+			<tr>
+				<td align="center">ACCOUNT ID </td>
+				<td align="center">DATE-TIME</td>
+				<td align="center">BALANCE</td>
+				<td align="center">TRANSACTION ID</td>
+			</tr>
+			<tr><td colspan=100%><hr></td></tr>
+			<tr style="color:blue;" ng-repeat="account in data.queryresponse">
+				<td align="center">{{account.accountId}}</td>
+				<td align="center">{{account.txTime}}</td>
+				<td align="center">{{account.balance}}</td>
+				<td align="center">{{account.txId}}</td>
+			</tr>
+			
+		</table>
+	</div>
+	
+	<div align=center id="accountbalance" ng-show="{{showaccountbalance}}" >
+		<br><b>ACCOUNT BALANCE</b>
+		<br>
+
+		<table align="center">
+		
+			<tr>
+				<td align="center">ACCOUNT ID</td>
+				<td align="center">BALANCE</td>
+			</tr>
+			<tr><td colspan=100%><hr></td></tr>
+			<tr style="color:blue;" ng-repeat="account in data.queryresponse">
+				<td align="center">{{account.accountId}}</td>
+				<td align="center">{{account.balance}}</td>
+			</tr>
+			
+		</table>
+	</div>
+
+
+			<div id="debug" ng-show="0==1" style="background-color:grey;color:white;">
+			<br>DEBUG
+				<br>accountid: {{accountId}}
+				<br>response status value: {{statusval}}
+				<br>response status text: {{statustext}}
+				<br>response message: {{msg}}
+				
+			</div>
+</form>
+</body>
