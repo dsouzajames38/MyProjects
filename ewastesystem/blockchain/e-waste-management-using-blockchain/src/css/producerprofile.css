@@ -1,0 +1,168 @@
+/**{
+  font-family: 'Comic Sans MS', arial;
+}*/
+.sidenav {
+  height: 100%;
+  width: 20%;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  padding-top: 20px;
+}
+
+.sidenav a {
+  padding: 6px 6px 6px 32px;
+  text-decoration: none;
+  font-size: 20px;
+  color: #818181;
+  display: block;
+}
+
+.sidenav a:hover {
+  color: black;
+}
+
+.container{
+  overflow: auto;
+  margin: 5px 5px;
+}
+
+#adminaddress{
+  text-align: center;
+}
+#loaderText{
+    text-align: center;
+}
+.mainbox{
+  display:flex;
+  flex-wrap: wrap;
+  align-content: center;
+  margin-top: 20px;
+}
+.formclass1,.penalizeform{
+  border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+    
+}
+.formclass2{
+  border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+    
+}
+.list-content{
+  width: 100%;
+
+}
+
+h3{
+  text-align: center;
+}
+
+input[type=text], select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: 3px solid #ccc;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  outline: none;
+
+}
+  
+input[type=text]:focus {
+  border: 3px solid #555;
+}
+input[type=number], select {
+ width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: 3px solid #ccc;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  outline: none;
+
+}
+input[type=number]:focus {
+  border: 3px solid #555;
+}
+.button1 {
+  background-color: #008CBA; /* Green */
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  width: 20%;
+  margin-left: 40%;
+  margin-right: 40%;
+
+}
+
+
+
+.btn-add{
+  background-color: white; 
+  color: black; 
+  border: 2px solid #008CBA;
+  margin-top: 20px;
+}
+
+.btn-add:hover {
+  background-color: #008CBA;
+  color: white;
+}
+
+table, td, th {  
+  border: 1px solid #ddd;
+  text-align: left;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th, td {
+  padding: 15px;
+  text-align: center;
+
+}
+
+
+#accountaddress{
+
+width: 50%; 
+margin-left: 500px;
+text-align: center;
+margin-top: 60px;
+
+
+}
+
+h2{
+
+font-color:#f1f1f1;
+
+}
+
+
+
+
+
+
+
+
+
+

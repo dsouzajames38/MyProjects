@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Welcome Consumer</title>
+	<meta name="keywords" content="Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod.">
+  <meta name="description" content="Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod.">
+  
+  <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/flat-icon/flaticon.css">
+  <link rel="stylesheet" href="temp/styles/styles.css">
+	<link rel="stylesheet" href="css/consumerprofile.css">
+	<link rel="stylesheet" type="text/css" href="css/producerprofile.css">
+	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+ <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+
+</head>
+<body>
+	<div class="loader">
+		<h4 id="loaderText" class="w3-blue">Loading...</h4>
+	</div>
+
+
+<div class="container" style="width: 100%">
+		
+
+<nav class="navbar navbar-dark bg-primary navbar-fixed-top">
+  <div class="container-fluid">
+
+    <ul class="nav navbar-nav" style="float: left;">
+     <li><a class="accountaddress navbar-dark bg-primary"></a></li>
+    </ul>
+   
+    <ul class="nav navbar-nav" style="float: right;">
+     <li><a href="index.html" class="navbar-dark bg-primary" >HOME</a></li>
+     <li><a href="#addformtitle" class="navbar-dark bg-primary">ADD PRODUCT</a></li>
+     <li><a href="#stockproducttile" class="navbar-dark bg-primary">PRODUCT STOCK</a></li>
+     <li> <a href="#returnedproducttile" class="navbar-dark bg-primary">RETURNED PRODUCT LIST</a></li>
+  </ul>
+  </div>
+</nav>
+    <br><br>
+		<div class="mainbox">
+			
+
+			<div class="form-div" style="width: 100%">
+				<div id="addformtitle" style="text-align: center;font-size: 20px; width: 50%;margin: auto 25% auto 25%; "><h3>Buy Product</h3></div>
+				<form onsubmit="ConApp.buyProduct(); return false;">
+					<div class="formclass1" style="width: 50%;margin: auto 25% auto 25%; ">
+					    <label for="pid">Retailer Name</label>
+					    <select id="retailerSelect" onchange="ConApp.updateRetailer(); return false;">
+					    	<option value="NULL" disabled selected>Select a producer</option>
+					    </select>
+
+						<label for="type">Type</label>
+					    <select id="productType" name="productType" onchange="ConApp.updateRetailer(); return false;">
+						     <option value="Mobile">Mobile</option>
+						     <option value="Television">Television</option>
+						     <option value="Laptop">Laptop</option>
+						     <option value="Speaker">Speaker</option>
+					    </select>
+
+					    <label for="product">Select Product</label>
+
+					    <select id="productlistSelect" onchange="ConApp.updateCount(); return false;">
+					    	<option value="NULL" disabled selected>Select an option</option>
+					    </select>
+
+					    <label for="quan">Quantity</label>
+					    <input type="number" id="quantity" name="quantity" placeholder="Quantity">
+
+  
+					</div>
+					<button type="submit" class="button1 btn-add" >Buy product</button>
+				</form>
+			</div>
+
+			<div class="list-content" style="width: 100%">
+				<br><br>
+				<div style="text-align: center;font-size: 20px; width: 50%;margin: auto 25% auto 25%;" id="stockproducttile"><h3>Product Stock</h3></div>
+				<table class="w3-table-all w3-hoverable w3-card" style="width: 50%;margin: auto 25% auto 25%;">
+						<thead>
+			                <tr class="w3-blue">
+			                	<th scope="col">ID</th>
+			                 	<th scope="col">Name</th>
+			                	<th scope="col">Type</th>
+			                </tr>
+			            </thead>
+			            <tbody id="productList">
+              			</tbody>
+				</table>
+			</div>
+
+			<div class="list-content" style="margin-bottom: 100px;">
+				<br><br>
+				<div style="text-align: center;font-size: 20px; width: 50%;margin: auto 25% auto 25%;" id="returnedproducttile"><h3>Returned Product</h3></div>
+				<table class="w3-table-all w3-hoverable w3-card" style="width: 50%;margin: auto 25% auto 25%;">
+						<thead>
+			                <tr class="w3-blue">
+			                	<th scope="col">ID</th>
+			                	<th scope="col">Name</th>
+			                  	<th scope="col">Type</th>
+			                </tr>
+			            </thead>
+			            <tbody id="returnedProductList">
+
+			            </tbody>
+				</table>
+			</div>
+			
+
+		</div>
+	
+
+
+
+
+
+
+ <footer class="footer footer--bg">
+        <div class="container">
+          <div class="page-section">
+            <div class="row gutters-100">
+              <div class="col-md-4 col-lg-3">
+                <div class="footer__first">
+                  <h2 class="footer__title">E-WASTE MANAGEMENT SYSTEM</h2>
+                  <p class="footer-first__paragraph">Together lets reduce the production of E-waste by recycling them.</p>
+                  <ul class="footer-first__social-icons">
+                    <li><a href="#"><i class="flaticon-facebook-letter-logo"></i></a></li>
+                    <li><a href="#"><i class="flaticon-twitter-logo"></i></a></li>
+                    <li><a href="#"><i class="flaticon-dribbble-logo"></i></a></li>
+                    <li><a href="#"><i class="flaticon-behance-logo"></i></a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-md-6 col-lg-2">
+                <div class="footer__second">
+                  <h2 class="footer__title">QUICK LINK</h2>
+                  <ul>
+                    <li><a href="#hme">Home</a></li>
+                 	<li><a href="#serv">Services</a></li>
+              		<li><a href="#reg">Register</a></li> 
+              		<li><a href="#lgn">Login</a></li> 
+              		<li><a href="#cont">Contact</a></li>
+              		<li><a href="#abt">About</a></li> 
+                  </ul>
+                </div>
+              </div>
+              <div class="col-md-6 col-lg-3">
+                <div class="footer__third">
+                  <h2 class="footer__title">CONTACT US</h2>
+                  <ul>
+                    <li><span class="glyphicon glyphicon-envelope"></span> <a href="#">ewastemanagementsystem@gmail.com</a></li>
+                    <li><span class="glyphicon glyphicon-earphone"></span> <a href="#">+0123-345-6789</a></li>
+                  </ul>
+                  <h4 class="footer__subscribe__title">Subscribe</h4>
+                  <div class="subscribe-section">
+                    <input type="email" class="form-control" size="50" placeholder="Enter Your Email" required>
+                    <button class="subscribe-section__button" type="button"><img src="assets/images/send-icon.png" alt=""></button>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6 col-lg-4">
+                <div class="footer__fourth">
+                  <h4 class="footer__title">INSTAGRAM</h4>
+                  <div class="row">
+                    <ul>
+                      <li><a href="#"><img src="assets/images/instagram-pic1.png" alt=""></a></li>
+                      <li><a href="#"><img src="assets/images/instagram-pic2.png" alt=""></a></li>
+                      <li><a href="#"><img src="assets/images/instagram-pic3.png" alt=""></a></li>
+                    </ul>
+                  </div>
+                  <div class="row">
+                    <ul>
+                      <li><a href="#"><img src="assets/images/instagram-pic4.png" alt=""></a></li>
+                      <li><a href="#"><img src="assets/images/instagram-pic5.png" alt=""></a></li>
+                      <li><a href="#"><img src="assets/images/instagram-pic6.png" alt=""></a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!--<hr class="footer__horizontal-bar">
+            <p class="footer__bottom-paragraph">&copy; Copyright 2017 <a href="#" style="color: #00aafe;font-weight:bold;">DartThemes</a>. All Rights Reserved</p>
+          </div>-->
+        </div>
+      </footer>
+
+</div>
+
+   <script src="js/jquery.min.js"></script>
+    <script src="js/web3.min.js"></script>
+    <script src="js/truffle-contract.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/consumer_app.js"></script>
+
+
+
+
+
+
+
+</body>
+</html>
